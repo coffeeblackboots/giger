@@ -1,0 +1,7 @@
+{
+  "name": "giger",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,70 @@
+page-applied-gigs {
+
+    .scroll-content {
+        padding: 24px !important;
+    }
+
+    .item-md.item-block .item-inner{
+        padding-right: 0px!important; 
+    }
+
+    .appliedGigsHeader{
+        font-style: Rubik-Medium!important;
+        font-size: 28px!important;
+        color: #363640;
+        font-weight: 600!important;
+        margin-bottom: 16px!important;
+    }
+
+    .appliedGigsCard{
+        border-radius: 12px!important;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 16px !important;
+    }
+
+    .redBookmark{
+        color: #e53935!important;
+    }
+
+    .viewEventBtn{
+        font-family: Rubik-Regular!important;
+        font-size: 14px!important;
+        color: #363640;
+        padding: 0px!important;
+        color: #00cdac;
+    }
+
+    .endOfCard{
+        border-bottom: 1px solid #e0e0e0!important; /* This creates the border. Replace black with whatever color you want. */
+        padding-bottom: 8px!important;
+    }
+    
+    .item-md{
+        color: #363640!important;
+        padding-left: 8px!important;
+    }
+    
+    .payPerDayBadge{
+        background: #00cdac;
+        color: white!important;
+        padding: 10px!important;
+        padding-left: 16px!important;
+        padding-right: 16px!important;
+        font-family: Rubik-Medium!important;
+        font-size: 14px!important;
+        letter-spacing: 0.4px;;
+        font-weight: unset!important;
+        border-radius: 64px!important;
+        margin-bottom: 4px!important;
+    }
+
+    .appliedGigIcon{
+        color: red;
+    }
+
+    .eventGigStatus{
+        font-family: Rubik-Regular!important;
+        color: red!important;
+        font-size: 14px!important;
+        letter-spacing: 0.15px;
+    }
+}

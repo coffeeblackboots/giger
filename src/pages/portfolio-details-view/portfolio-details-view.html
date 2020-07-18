@@ -1,0 +1,82 @@
+<!--
+  Generated template for the PortfolioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar transparent>
+    <span class="profileIndicator" float-right padding-right padding-top>4<span class="profileIndicatorAfter">/4</span></span>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content padding>
+      <ion-item>
+          <ion-label class="portfolioPageLabel">PORTFOLIO</ion-label>
+      </ion-item>
+
+          <ion-item text-wrap>
+              <ion-label class="portfolioPageSubLabel"><p class="portfolioPageSubLabelPara">Photo Directory : Knowing you Better</p><p class="portfolioPageSubLabelPara">Upload minimum 3 Decent Photos</p></ion-label>
+          </ion-item>
+          <div padding>
+              <ion-segment [(ngModel)]="portfolioImages">
+                <ion-segment-button value="images">
+                  Images
+                </ion-segment-button>
+                <ion-segment-button value="adhar">
+                  Adhaar
+                </ion-segment-button>
+              </ion-segment>
+            </div>
+            
+            <div [ngSwitch]="portfolioImages">
+                
+              <ion-list *ngSwitchCase="'images'">
+                  <ion-item text-wrap>
+                      <ion-label  text-wrap class="portfolioPageSubLabel"><p class="portfolioPageSubLabelPara">Upload minimum 3 Decent Photos, Maximum 5.</p></ion-label>
+                      <button no-margin ion-fab color="primary" (click)="uploadPortfolioImage()" class="imageHolderIconPortfolio" item-end>
+                          <ion-icon name="camera"></ion-icon>
+                        </button>
+                  </ion-item>
+
+
+                <ion-item *ngFor="let image of imagesPortfolio">
+                    <img class="portfolioImageView" src="{{image.imageUrl}}">
+                  <h2>{{image.caption}}</h2>
+                  <button ion-button clear item-end class="inputBtnUser" icon-only padding margin>
+                      <ion-icon class="trashImage" name="trash"></ion-icon>
+                  </button>
+                </ion-item>
+              </ion-list>
+
+              
+            
+              <ion-list *ngSwitchCase="'adhar'">
+                  <ion-item text-wrap>
+                      <ion-label class="portfolioPageSubLabel"><p class="portfolioPageSubLabelPara">Identifying you better</p></ion-label>
+                      <button ion-fab color="primary" class="imageHolderIconPortfolio" item-end>
+                          <ion-icon name="camera"></ion-icon>
+                        </button>
+                  </ion-item>
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="img/thumbnail-kitten-1.jpg">
+                  </ion-thumbnail>
+                  <h2>Luna</h2>
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                      <img src="img/thumbnail-kitten-1.jpg">
+                    </ion-thumbnail>
+                    <h2>Luna</h2>
+                  </ion-item>
+              </ion-list>
+              
+            </div>
+        
+            <ion-fab bottom right margin-right margin-bottom>
+              <button ion-fab color="primary">
+                  <ion-icon name="add"></ion-icon>
+              </button>
+            </ion-fab>
+</ion-content>

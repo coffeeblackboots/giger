@@ -1,0 +1,129 @@
+
+
+<ion-header no-border>
+
+  <ion-navbar transparent>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+      <ion-card margin-bottom *ngFor="let event of eventList" class="viewGigCard">
+
+        <ion-item class="eventTitleViewGigPageItem">
+          <span class="eventCategoryViewGigPage" no-margin>Entertainment</span>
+        </ion-item>
+          <ion-item>
+              <span class="eventTitleViewGigPage" no-margin text-wrap>{{event.eventName}}</span>
+          </ion-item>
+          
+          <ion-item class="eventCompanyItemViewGigPage">
+                <h2><span class="eventCompanyLabelViewGigPage" item-start>{{event.eventCompanyName}}</span></h2>
+                <p><span class="eventCompanyCityViewGigPage" item-start>{{event.eventCity}}</span></p>
+                <ion-avatar item-end>
+                      <img class="eventCompanyProfilePicViewGigPage" src="../../assets/imgs/anneHathway.jpg">
+                </ion-avatar>
+          </ion-item>
+            
+          <ion-item no-margin>
+                  <span class="eventPostedByHeaderViewGigPage" item-start no-margin>Posted By :</span>
+                  <span class="eventPostedByNameViewGigPage" item-start no-margin>{{event.postedBy}}</span>
+          </ion-item>
+
+          <ion-item class="endOfEventCompanyDetailsViewGigPage">
+                  <span [ngClass]="event.eventStatus == 'Open' ? 'eventPostedStatusLabelActiveViewGigPage': 'eventPostedStatusLabelInActiveViewGigPage'">{{event.eventStatus}}</span>
+                  <span padding-right float-right class="eventPostedTimeViewGigPage">Posted : {{ event.postDateTime | timeAgo}}</span>
+          </ion-item>
+
+
+
+          <ion-item padding-top class="eventDetailsHeaderViewGigPageItem">
+              <span class="eventDetailsHeaderViewGigPage" no-margin>Event Details</span>
+          </ion-item>
+
+          <ion-item padding-top>
+                    <ion-icon name="pin" item-start no-margin class="iconEventCardViewGigPage"></ion-icon>
+                      <span class="eventVenueViewGigPage" item-start no-margin>{{event.eventAddress}}</span>
+          </ion-item>
+
+          <ion-item padding-top>
+                      <ion-icon name="calendar" item-start no-margin class="iconEventCardViewGigPage"></ion-icon>
+                      <span class="eventStartDateViewGigPage" item-start no-margin>{{event.startDate}}</span>
+                      <span item-start no-margin class="toSpan">TO</span>
+                      <span class="eventEndDateViewGigPage" item-start no-margin>{{event.endDate}}</span>
+          </ion-item>
+
+          <ion-item padding-top>
+                      <ion-icon name="time" item-start class="iconEventCardViewGigPage"></ion-icon>
+                        <span class="eventStartTimeViewGigPage" item-start no-margin>{{event.startTime}}</span>
+                        <span item-start no-margin class="toSpan">TO</span>
+                        <span class="eventEndTimeViewGigPage" item-start no-margin>{{event.endTime}}</span>
+          </ion-item>
+
+          <ion-item padding-top>
+                            <ion-icon name="man" item-start no-margin class="iconEventCardViewGigPage"></ion-icon>
+                              <span class="eventRequiredManViewGigPage" item-start margin-right padding-right>{{event.maleRequired}}</span>
+                              <ion-icon name="woman" item-start margin-right class="iconEventCardViewGigPage"></ion-icon>
+                              <span class="eventRequiredWomanViewGigPage" item-start no-margin>{{event.femaleRequired}}</span>
+          </ion-item>
+
+          <ion-item padding-top padding-bottom class="endOfEventDetailsViewGigPage">
+              <p text-wrap class="eventDescriptionViewGigPage">
+                  {{event.eventDescription}}
+              </p>
+          </ion-item>
+
+                   
+          <ion-item padding-top *ngIf="event.breakfast||event.lunch||event.dinner||event.travel||event.accomodation">
+                  <span class="eventInclusionHeaderViewGigPage" no-margin>Inclusions</span>
+          </ion-item>
+
+          <ion-item class="endOfEventInclusionViewGigPage" padding-top text-wrap *ngIf="event.breakfast||event.lunch||event.dinner||event.travel||event.accomodation">
+                  <ion-badge *ngIf="event.breakfast" padding class="inclusionBadgeViewGigPage">Breakfast</ion-badge>
+                  <ion-badge *ngIf="event.lunch" padding class="inclusionBadgeViewGigPage">Lunch</ion-badge>
+                  <ion-badge *ngIf="event.dinner" padding class="inclusionBadgeViewGigPage">Dinner</ion-badge>
+                  <ion-badge *ngIf="event.travel" padding class="inclusionBadgeViewGigPage">Travel</ion-badge>
+                  <ion-badge *ngIf="event.accomodation" padding class="inclusionBadgeViewGigPage">Accomodation</ion-badge>
+          </ion-item>
+
+
+          <ion-item padding-top>
+              <span class="eventPaymentHeaderViewGigPage" no-margin>Payment</span>
+          </ion-item>
+
+          <ion-item padding-top>
+                  <ion-badge padding class="payPerDayBadgeViewGigPage">₹ {{event.perDayAmount}} / Day</ion-badge>
+          </ion-item>
+        </ion-card>
+</ion-content>
+
+<ion-footer >
+    <ion-toolbar class="eventToolbaarFooterViewGigPage">
+        <ion-row>
+            <ion-col>
+              <button ion-button clear class="inputBtnUser" icon-only>
+                <ion-icon item-start name="share" class="bottomBtnPost"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col align-self-center text-center>
+                <button *ngIf="!appliedBol" class="interestedBtn" padding ion-button justify-content-center (click)="applyForEvent(eventId)" clear>
+                    APPLY
+                  </button>
+                  <button *ngIf="appliedBol" class="interestedBtn" padding ion-button justify-content-center (click)="applyForEvent(eventId)" clear disabled>
+                      APPLIED
+                    </button>
+            </ion-col>
+            <ion-col>
+
+                <!-- Write your comments here -->
+                <button *ngIf="!bookmarkValueBol" ion-button clear float-right class="inputBtnUser" icon-only (click)="bookmarkEvent(eventId)">
+                    <ion-icon class="grayBookmark" name="bookmark" isActive="true"></ion-icon>
+                  </button>   
+                  <button *ngIf="bookmarkValueBol" ion-button clear float-right class="inputBtnUser" icon-only (click)="removeBookmarkEvent(eventId)">
+                    <ion-icon class="redBookmark" name="bookmark" isActive="true"></ion-icon>
+                  </button>
+            </ion-col>
+          </ion-row>
+    </ion-toolbar>
+</ion-footer>

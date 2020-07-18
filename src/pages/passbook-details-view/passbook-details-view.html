@@ -1,0 +1,89 @@
+<!--
+  Generated template for the PassbookDetailsViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>passbookDetailsViewPage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list-header class="profileViewHeader">
+    Skills and Education
+  </ion-list-header>
+
+  <ion-item (click)="updateAccountHolderName()" no-padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-wrap col-5> Account Holder Name</ion-col>
+        <ion-col text-wrap col-7 *ngIf="userPassbookDetails?.acName">
+          {{userPassbookDetails?.acName}}
+        </ion-col>
+        <ion-col text-wrap col-7 class="placeholder-profile" *ngIf="!userPassbookDetails?.acName">
+          <span> Tap here to add your Account Name. </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-item (click)="updateAccountNumber()" no-padding>
+      <ion-grid>
+        <ion-row>
+          <ion-col text-wrap col-5> Account Number</ion-col>
+          <ion-col text-wrap col-7 *ngIf="userPassbookDetails?.acNo">
+            {{userPassbookDetails?.acNo}}
+          </ion-col>
+          <ion-col text-wrap col-7 class="placeholder-profile" *ngIf="!userPassbookDetails?.acNo">
+            <span> Tap here to add your Account Number. </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-item>
+
+  <ion-item (click)="updateBankName()" no-padding>
+      <ion-grid>
+        <ion-row>
+          <ion-col text-wrap col-5> Bank Name</ion-col>
+          <ion-col text-wrap col-7 *ngIf="userPassbookDetails?.bName">
+            {{userPassbookDetails?.bName}}
+          </ion-col>
+          <ion-col text-wrap col-7 class="placeholder-profile" *ngIf="!userPassbookDetails?.bName">
+            <span> Tap here to add your Bank Name. </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-item>
+
+  <ion-item (click)="updateIFSC()" no-padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-5 text-wrap> IFSC Code</ion-col>
+        <ion-col col-7 text-wrap *ngIf="userPassbookDetails?.ifsc">
+          {{userPassbookDetails?.ifsc}}
+        </ion-col>
+        <ion-col col-7 text-wrap class="placeholder-profile" *ngIf="!userPassbookDetails?.ifsc">
+          <span> Tap here to add IFSC Code. </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-item>
+<ion-item (click)="updateUPI()" no-padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-5 text-wrap> UPI Id</ion-col>
+      <ion-col col-7 text-wrap *ngIf="userPassbookDetails?.upi">
+        {{userPassbookDetails?.upi}}
+      </ion-col>
+      <ion-col col-7 text-wrap class="placeholder-profile" *ngIf="!userPassbookDetails?.upi">
+        <span> Tap here to add your UPI Id. </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+</ion-content>

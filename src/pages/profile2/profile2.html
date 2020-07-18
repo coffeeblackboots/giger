@@ -1,0 +1,62 @@
+<!--
+  Generated template for the Profile2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar transparent>
+    <span class="profileIndicator" float-right padding-right padding-top>2<span class="profileIndicatorAfter">/2</span></span>
+  </ion-navbar>
+</ion-header>
+  
+<ion-content padding>
+      <ion-item>
+          <ion-label class="profilePageLabel">PROFILE</ion-label>
+      </ion-item>
+      <ion-list>
+          <ion-item text-wrap>
+              <ion-label class="profilePageSubLabel">Skills & Education : You are what your Skills are</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" class="profilePageFormLabel" floating>Language Spoken</ion-label>
+            <ion-select [(ngModel)]="language" multiple="true">
+                <ion-option value="marathi">Marathi</ion-option>
+                <ion-option value="hindi">Hindi</ion-option>
+                <ion-option value="english">English</ion-option>
+                <ion-option value="sindhi">Sindhi</ion-option>
+              </ion-select>
+          </ion-item>
+          <ion-item>
+              <ion-label color="primary" class="profilePageFormLabel" floating>Hobbies</ion-label>
+              <ion-select [(ngModel)]="hobbies" multiple="true">
+                  <ion-option value="swimming">Swimming</ion-option>
+                  <ion-option value="reading">Reading</ion-option>
+                  <ion-option value="cycling">Cycling</ion-option>
+                </ion-select>
+          </ion-item>
+          <ion-item>
+              <ion-label color="primary" class="profilePageFormLabel" floating>School</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" class="profilePageFormLabel" floating>College</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" class="profilePageFormLabel" floating>Job Status</ion-label>
+              <ion-select [(ngModel)]="jobStatus">
+                <ion-option value="employed">Employed</ion-option>
+                <ion-option value="unemployed">Unemployed</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" class="profilePageFormLabel" floating>Employed At</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+        </ion-list>
+        <ion-fab right bottom padding>
+            <button ion-fab color="primary" (click)="profile3()"><ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-fab>
+</ion-content>
+  

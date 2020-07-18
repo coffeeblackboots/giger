@@ -1,0 +1,64 @@
+<!--
+  Generated template for the Profile1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+  <ion-navbar transparent>
+    <span class="profileIndicator" float-right padding-right padding-top>1<span class="profileIndicatorAfter">/2</span></span>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-label class="profilePageLabel">PROFILE</ion-label>
+    </ion-item>
+    <ion-list>
+        <ion-item text-wrap>
+            <ion-label class="profilePageSubLabel">Personal Details : Knowing  is  Caring</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" class="profilePageFormLabel" floating>Full Name</ion-label>
+          <ion-input type="text" class></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" class="profilePageFormLabel" floating>Email ID</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" class="profilePageFormLabel" floating>Date Of Birth</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+          </ion-item>
+          <ion-item>
+              <ion-label color="primary" class="profilePageFormLabel" floating>Address Line 1</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary" class="profilePageFormLabel" floating>Address Line 2</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label color="primary" class="profilePageFormLabel" floating>State</ion-label>
+                  <ion-select [(ngModel)]="state">
+                      <ion-option value="mh">Maharashtra</ion-option>
+                      <ion-option value="mumbai">Karnataka</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label color="primary" class="profilePageFormLabel" floating>City</ion-label>
+                    <ion-select [(ngModel)]="city">
+                        <ion-option value="pune">PUNE</ion-option>
+                        <ion-option value="mumbai">MUMBAI</ion-option>
+                        <ion-option value="delhi">DELHI</ion-option>
+                        <ion-option value="benglaru">BENGlARU</ion-option>
+                      </ion-select>
+                  </ion-item>
+      </ion-list>
+      <ion-fab right bottom padding>
+          <button ion-fab color="primary" (click)="profile2()"><ion-icon name="arrow-forward"></ion-icon></button>
+      </ion-fab>
+</ion-content>

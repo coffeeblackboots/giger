@@ -1,0 +1,572 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+    font-family: 'Rubik-Black';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/rubik/Rubik-Black.ttf');
+  }
+
+@font-face {
+    font-family: 'Rubik-Bold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/rubik/Rubik-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik-Light';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/rubik/Rubik-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik-Medium';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/rubik/Rubik-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik-Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/rubik/Rubik-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'ProximaNovaScOsfThin';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/Proxima/ProximaNovaScOsfThin.ttf');
+  }
+
+@font-face {
+    font-family: 'ProximaNovaThin';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../assets/fonts/Proxima/FontsFree-Net-Proxima-Nova-Thin.otf');
+}
+
+.toolbar-title {
+    font-family: Rubik-Regular!important;
+    font-size: 22px!important;
+    color: Black!important;
+    letter-spacing: 0.25px;
+}
+
+//Menu CSS Style
+
+.menuListItem{
+    font-family: Rubik-Medium!important;
+    font-size: 14px;
+    letter-spacing: 0.15px!important;
+}
+
+.menuListIcon{
+    font-size: 14px!important;
+}
+
+.menuListHeader{
+    font-family: ProximaNovaThin!important;
+    font-weight: 700!important;
+    font-size: 14px!important;
+    letter-spacing: 0.15px!important;
+}
+
+//HomePage CSS Style
+
+ion-icon {
+    &[class*="custom-"] {
+      mask-size: contain;
+      mask-position: 50% 50%;
+      mask-repeat: no-repeat;
+      background: currentColor;
+      width: 1em;
+      height: 1em;
+    }
+  
+    &[class*="custom-menu"] {
+      mask-image: url(../assets/icon/menu.svg);
+      color: black;
+      font-size: 26px!important;
+    }
+
+    &[class*="filter-icon"] {
+        mask-image: url(../assets/icon/filter.svg);
+        color: black;
+        font-size: 26px!important;
+    }
+  }
+
+.homeNavBar{
+    min-height: 35px;
+}
+
+
+
+.locationBar{
+    min-height: 3.3rem;
+}
+
+.eventInLabel{
+    font-family: Rubik-Regular!important;
+    color: rgb(95, 95, 95)!important;
+    font-size: 14px!important;
+    letter-spacing: 0.4px;
+    margin-bottom: 7px!important;
+}
+
+ion-icon{
+    font-size: 2.3rem!important;
+}
+
+page-home .item > ion-icon.locationIconHeader{
+    font-size: 1.3rem!important;
+    color: #607D8B!important;
+    margin-right: 0px!important;
+}
+
+page-home .item > ion-icon.iconEventCard{
+    font-size: 16px!important;
+}
+
+.item-inner, ion-item {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.text-input{
+    font-family: Rubik-Regular!important;
+}
+
+.button-inner{
+    font-family: Rubik-Medium!important;
+}
+
+.card-md{
+    margin:0px;
+    width: calc(100%);
+}
+
+.eventCompanyItem{
+    padding-top: 16px!important;
+    padding-right: 8px!important;
+}
+
+.eventCompanyLabel,.eventPostedByHeader,.eventInclusionHeader{
+    font-family: Rubik-Regular!important;
+    color: #363640!important;
+    font-size: 14px!important;
+    letter-spacing: 0.15px;
+}
+
+.eventPostedTimeLabel{
+    font-family: Rubik-Light!important;
+    color: #363640!important;
+    font-size: 12px!important;
+}
+
+.eventCompanyCity{
+    font-family: Rubik-Light!important;
+    font-size: 12px!important;
+    letter-spacing: 0.4px;
+}
+
+.eventPostedStatusLabelActive{
+    color: #64DD17;
+    font-family: Rubik-Regular!important;
+    font-size: 12px!important;
+    letter-spacing: 0.4px;
+}
+
+.eventPostedStatusLabelInActive{
+    color: #e53935;
+    font-family: Rubik-Regular!important;
+    font-size: 12px!important;
+    letter-spacing: 0.4px;
+}
+
+.eventTitle{
+    color: Black!important;
+    font-family: Rubik-Medium!important;
+    font-size: 22px!important;
+    letter-spacing: 0.25px
+}
+
+.eventPostedTime{
+    font-family: Rubik-Light!important;
+    font-size: 14px!important;
+    color: #acacac;
+    letter-spacing: 0.15px;
+    margin-top: 2px;
+}
+
+.eventVenue,.eventEndTime,.eventStartTime,.eventStartDate,
+.eventEndDate,.eventRequiredMan,.eventRequiredWoman,
+.eventDescription,.inputBtnUser{
+    font-family: Rubik-Regular!important;
+    color: #363640!important;
+    font-size: 14px!important;
+    letter-spacing: 0.15px;
+}
+
+.eventPostedByName{
+    font-family: Rubik-Medium!important;
+    color: #363640!important;
+    font-size: 14px!important;
+    letter-spacing: 0.4px;
+
+}
+
+.toSpan{
+    font-family: Rubik-Medium!important;
+    color: #363640!important;
+    font-size: 14px!important;
+    letter-spacing: 0.4px;
+}
+
+
+
+.item-md{
+    color: #363640!important;
+}
+
+
+
+///////////////
+// Location Select Page Modal
+.locationSelectItems{
+    font-family: Rubik-Medium!important;
+    color: #363640!important;
+}
+
+.locationSelectMessage{
+    font-family: Rubik-Regular!important;
+    color: #363640!important;
+}
+
+//filter Modal
+.clearFilter{
+    font-family: Rubik-Regular!important;
+    letter-spacing: 1.25px;
+    font-size: 16px!important;
+}
+
+.applyFilter{
+    font-size: 1.6rem!important;
+}
+
+.filterModalLabel,.filterModalDate,.filterModalSelect{
+    font-family: Rubik-Regular!important;
+    font-size: 14px!important;
+    letter-spacing: 0.15px;
+}
+
+.filterPriceBadge{
+    background: transparent!important;
+    border: 2px solid #00cdac;
+    color: black;
+    border-radius: 64px;
+    padding-top: 6px!important;
+    padding-bottom: 6px!important;
+}
+
+.range-knob,.range-bar-active{
+    background: #269D7D!important;
+}
+
+
+// Signup Page CSS Styling Start Here
+
+.signupPageLabel,.loginPageLabel{
+    font-size: 70px;
+    color: #363640!important;
+    font-family: ProximaNovaScOsfThin!important;
+}
+
+.signupBtn,.loginBtn{
+    background: #9b2bfd!important;
+    border-radius: 8px;
+    padding: 22px!important;
+    margin-top: 40px;
+}
+
+.signupBtnSpan,.loginBtnSpan{
+    font-family: Rubik-Regular!important;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    font-weight: 800;
+}
+
+.signupFormLabel,.loginFormLabel{
+    font-family: Rubik-Regular!important;
+    color: #363640!important;
+}
+
+//mainPage CSS
+
+
+
+.mainLabel{
+    background: linear-gradient(200deg,#ff9933, #9b2bfd, #00cdac);
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+    font-family: ProximaNovaScOsfThin!important;
+    font-size: 9rem;
+    font-weight: 600!important;
+    margin-top: 90px;
+    letter-spacing: 1px;
+    margin-bottom: 0px!important;
+}
+
+.mainSubLabel{
+    color: #363640!important;
+    font-family: 'Rubik-Light'!important;
+    font-size: 14pt;
+    letter-spacing: 0.25px!important;
+    margin-top:-5px!important;
+    text-transform: uppercase;
+
+}
+
+
+
+.mainPageBtnSolid{
+    font-family: ProximaNovaScOsfThin!important;
+    background: linear-gradient(30deg, #6300b9, #00cdac);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding-top: 22px!important;
+    padding-bottom: 22px!important;
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    right: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mainPageBtnClear{
+    border-width: 2px!important;
+    border-color: #9b2bfd!important;
+    font-family: Rubik-Regular!important;
+    color: #363640;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding-top: 22px!important;
+    padding-bottom: 22px!important;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    right: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clearSignupBtnSpan{
+    /*
+    background: linear-gradient(30deg, #9b2bfd, #00cdac);
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+    */
+    color: #3e0074;
+    font-size:16px!important;
+    font-family: Rubik-Regular!important;
+    letter-spacing: 1.25px;
+}
+
+.mainPageSignupItem{
+    bottom: 20px;
+    padding-right: 32px;
+    position: absolute;
+}
+
+.mainPageLoginItem{
+    bottom: 100px;
+    padding-right: 32px;
+    position: absolute;
+}
+
+
+
+//profile page
+.profilePageLabel{
+    font-size: 70px;
+    color: #363640!important;
+    font-family: ProximaNovaScOsfThin!important;
+}
+
+.profilePageSubLabel{
+    font-size: 18px!important;
+    color: #363640!important;
+    font-family: ProximaNovaThin!important;
+}
+
+.profilePageFormLabel{
+    font-family: Rubik-Regular!important;
+    //color: #363640!important;
+}
+
+.profileIndicator{
+    color: #269D7D!important;
+    font-family: ProximaNovaScOsfThin!important;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profileIndicatorAfter{
+    font-size: 25px;
+}
+
+// Passbook Page
+
+.passbookPageLabel{
+    font-size: 60px;
+}
+
+//PORTFOLIO PAGE
+.portfolioPageLabel{
+    font-size: 50px;
+    color: #363640!important;
+    font-family: ProximaNovaScOsfThin!important;
+    white-space: pre-line;
+}
+
+.portfolioPageSubLabel{
+    font-size: 18px!important;
+    color: #363640!important;
+    font-family: ProximaNovaThin!important;
+}
+
+.portfolioPageSubLabelPara{
+    font-size: unset!important;
+}
+
+.imageHolderPortfolio{
+    border-radius: 8px!important;
+    border : 2px dotted #269D7D!important;
+}
+
+.imageHolderIconPortfolio{
+    background-color: white!important;
+    color: #269D7D!important;
+    margin:unset!important;
+    margin-bottom: 8px!important;
+}
+
+.trashImage{
+    color:#e53935;
+}
+
+// Awarded GIGs Page Styling
+
+.iconGigAwardedPage{
+    color: gold;
+    font-size: 30px!important;
+}
+
+    //Awarded Gigs Card Styling
+.gigStatus{
+    color:#e53935;
+    font-family: Rubik-Regular!important;
+    font-size: 16px!important;
+}
+
+.gigPayment{
+    color:#e53935;
+    font-family: Rubik-Regular!important;
+    font-size: 16px!important;
+}
+
+.gigStatusCompleted,.gigPaymentCompleted{
+    color:#64DD17;
+}
+
+// Applied GIGs Page Styling
+
+.iconGigAppliedPage{
+    color: #e53935;
+    font-size: 30px!important;
+}
+
+// Slider Page CSS Style
+
+.slide-zoom{
+    height: 100%;
+}
+
+.slide-title{
+    color: #269D7D!important;
+    font-family: ProximaNovaScOsfThin!important;
+    font-weight: 700!important;
+    font-size: 40px!important;
+}
+
+.slide-image {
+    max-height: 55%!important;
+    margin: 5px 0;
+}
+
+.slide-description{
+    padding: 0 40px;
+    font-size: 16px;
+    color: #60646B;
+    font-family: Rubik-Regular!important;
+}
+
+.swiper-pagination-bullet-active{
+    background: color($colors,primary)!important;
+}
+
+.last-title-slide{
+    margin-top: 40%!important;
+}
+
+.profileDetailsViewPageDOB{
+    padding-left: 8px;
+}
+
+.dob-label{
+    color: #363640!important;
+}
+
+.profileViewHeader{
+    border-top: unset!important;
+}
+
+.languageLabelSkillsPage{
+    color: #363640!important;
+}
+
+
+/* Portfolio View Details Page*/
+.portfolioImageView{
+    width: 100%;
+    height: auto;
+}
+
+/* View Gig Page  */
+
+.applyButtonViewGigPage{
+    background-color: #00cdac!important;
+    color: black!important;
+    margin-bottom: 8px!important;
+}

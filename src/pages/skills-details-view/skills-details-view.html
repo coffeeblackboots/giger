@@ -1,0 +1,120 @@
+<!--
+  Generated template for the SkillsDetailsViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>skillsDetailsView</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list-header class="profileViewHeader">
+    Skills and Education
+  </ion-list-header>
+
+  <ion-item (click)="updateSchool()" no-padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-wrap col-5> School Name</ion-col>
+        <ion-col text-wrap col-7 *ngIf="userSkillsDetails?.schoolN">
+          {{userSkillsDetails?.schoolN}}
+        </ion-col>
+        <ion-col text-wrap col-7 class="placeholder-profile" *ngIf="!userSkillsDetails?.schoolN">
+          <span> Tap here to add your School. </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-item (click)="updateJuniorCollege()" no-padding>
+      <ion-grid>
+        <ion-row>
+          <ion-col text-wrap col-5> Junior College</ion-col>
+          <ion-col text-wrap col-7 *ngIf="userSkillsDetails?.juniorCN">
+            {{userSkillsDetails?.juniorCN}}
+          </ion-col>
+          <ion-col text-wrap col-7 class="placeholder-profile" *ngIf="!userSkillsDetails?.juniorCN">
+            <span> Tap here to add your Junior College. </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-item>
+
+  <ion-item (click)="updateGraduationCollege()" no-padding>
+      <ion-grid>
+        <ion-row>
+          <ion-col text-wrap col-5> Graduation College</ion-col>
+          <ion-col text-wrap col-7 *ngIf="userSkillsDetails?.gradCN">
+            {{userSkillsDetails?.gradCN}}
+          </ion-col>
+          <ion-col text-wrap col-7 class="placeholder-profile" *ngIf="!userSkillsDetails?.gradCN">
+            <span> Tap here to add your Graduation College. </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-item>
+
+  <ion-item (click)="updatePostGraduationCollege()" no-padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-5 text-wrap> Post Graduation College</ion-col>
+        <ion-col col-7 text-wrap *ngIf="userSkillsDetails?.pgCN">
+          {{userSkillsDetails?.pgCN}}
+        </ion-col>
+        <ion-col col-7 text-wrap class="placeholder-profile" *ngIf="!userSkillsDetails?.pgCN">
+          <span> Tap here to add your Post Graduation College. </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-item>
+
+<ion-list-header class="profileViewHeader">
+  Languages Known
+</ion-list-header>
+
+<ion-item padding>
+    <ion-label>Language 1</ion-label>
+        <ion-select [(ngModel)]="language1" multiple="false" cancelText="Cancel" okText="Select" (ionChange)="onSelectLanguage1()">
+            <ion-option value="eng" *ngIf="userSkillsDetails?.lang2 != 'eng' && userSkillsDetails?.lang3 != 'eng'">English</ion-option>
+            <ion-option value="mar" *ngIf="userSkillsDetails?.lang2 != 'mar' && userSkillsDetails?.lang3 != 'mar'" >Marathi</ion-option>
+            <ion-option value="hind" *ngIf="userSkillsDetails?.lang2 != 'hind' && userSkillsDetails?.lang3 != 'hind'" >Hindi</ion-option>
+            <ion-option value="beng" *ngIf="userSkillsDetails?.lang2 != 'beng' && userSkillsDetails?.lang3 != 'beng'" >Bengali</ion-option>
+            <ion-option value="guj" *ngIf="userSkillsDetails?.lang2 != 'guj' && userSkillsDetails?.lang3 != 'guj'" >Gujarati</ion-option>
+            <ion-option value="tam" *ngIf="userSkillsDetails?.lang2 != 'tam' && userSkillsDetails?.lang3 != 'tam'" >Tamil</ion-option>
+            <ion-option value="mal" *ngIf="userSkillsDetails?.lang2 != 'mal' && userSkillsDetails?.lang3 != 'mal'" >Malyalam</ion-option>
+        </ion-select>
+</ion-item>
+
+<ion-item padding>
+    <ion-label>Language 2</ion-label>
+    <ion-select [(ngModel)]="language2" multiple="false" cancelText="Cancel" okText="Select" (ionChange)="onSelectLanguage2()">
+      <ion-option value="eng" *ngIf="userSkillsDetails?.lang1 != 'eng' && userSkillsDetails?.lang3 != 'eng'">English</ion-option>
+      <ion-option value="mar" *ngIf="userSkillsDetails?.lang1 != 'mar' && userSkillsDetails?.lang3 != 'mar'" >Marathi</ion-option>
+      <ion-option value="hind" *ngIf="userSkillsDetails?.lang1 != 'hind' && userSkillsDetails?.lang3 != 'hind'" >Hindi</ion-option>
+      <ion-option value="beng" *ngIf="userSkillsDetails?.lang1 != 'beng' && userSkillsDetails?.lang3 != 'beng'" >Bengali</ion-option>
+      <ion-option value="guj" *ngIf="userSkillsDetails?.lang1 != 'guj' && userSkillsDetails?.lang3 != 'guj'" >Gujarati</ion-option>
+      <ion-option value="tam" *ngIf="userSkillsDetails?.lang1 != 'tam' && userSkillsDetails?.lang3 != 'tam'" >Tamil</ion-option>
+      <ion-option value="mal" *ngIf="userSkillsDetails?.lang1 != 'mal' && userSkillsDetails?.lang3 != 'mal'" >Malyalam</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item padding>
+    <ion-label>Language 3</ion-label>
+    <ion-select [(ngModel)]="language3" multiple="false" cancelText="Cancel" okText="Select" (ionChange)="onSelectLanguage3()">
+      <ion-option value="eng" *ngIf="userSkillsDetails?.lang1 != 'eng' && userSkillsDetails?.lang2 != 'eng'">English</ion-option>
+      <ion-option value="mar" *ngIf="userSkillsDetails?.lang1 != 'mar' && userSkillsDetails?.lang2 != 'mar'" >Marathi</ion-option>
+      <ion-option value="hind" *ngIf="userSkillsDetails?.lang1 != 'hind' && userSkillsDetails?.lang2 != 'hind'" >Hindi</ion-option>
+      <ion-option value="beng" *ngIf="userSkillsDetails?.lang1 != 'beng' && userSkillsDetails?.lang2 != 'beng'" >Bengali</ion-option>
+      <ion-option value="guj" *ngIf="userSkillsDetails?.lang1 != 'guj' && userSkillsDetails?.lang2 != 'guj'" >Gujarati</ion-option>
+      <ion-option value="tam" *ngIf="userSkillsDetails?.lang1 != 'tam' && userSkillsDetails?.lang2 != 'tam'" >Tamil</ion-option>
+      <ion-option value="mal" *ngIf="userSkillsDetails?.lang1 != 'mal' && userSkillsDetails?.lang2 != 'mal'" >Malyalam</ion-option>
+  </ion-select>
+</ion-item>
+
+</ion-content>

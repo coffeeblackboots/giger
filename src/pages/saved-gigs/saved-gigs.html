@@ -1,0 +1,79 @@
+<!--
+  Generated template for the SavedGigsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar transparent class="homeNavBar" padding-top padding-bottom>
+      <ion-title left>Saved GIGs</ion-title>
+      <ion-buttons end no-margin>
+        <button ion-button menuToggle icon-only no-margin>
+          <ion-icon name="custom-menu"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-card margin-bottom *ngFor="let event of eventList">
+      <ion-item class="eventCompanyItem">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/logo.png">
+          </ion-avatar>
+          <h2><span class="eventCompanyLabel" item-start>{{event.eventCompanyName}}</span>
+            <ion-note float-right class="eventPostedTime">{{ event.postDateTime | timeAgo}}</ion-note></h2>
+          <p><span class="eventCompanyCity" item-start>{{event.eventCity}}</span>
+            <span [ngClass]="event.eventStatus == 'Open' ? 'eventPostedStatusLabelActive': 'eventPostedStatusLabelInActive'" float-right >Registerations {{event.eventStatus}}</span></p>
+      </ion-item>
+
+          <ion-item>
+                <span class="eventTitle" no-margin>{{event.eventName}}</span>
+            </ion-item>
+         
+            <ion-item no-margin>
+                <ion-icon name="calendar" item-start no-margin class="iconEventCard"></ion-icon>
+                <span class="eventStartDate" item-start no-margin>{{event.startDate}}</span>
+                <span item-start no-margin class="toSpan">TO</span>
+                <span class="eventEndDate" item-start no-margin>{{event.endDate}}</span>
+              </ion-item>
+            
+            
+             <ion-item>
+                <ion-badge padding class="payPerDayBadge">₹ {{event.perDayAmount}} / Day</ion-badge>
+        </ion-item>
+        
+        <ion-item no-margin>
+                <ion-icon name="create" item-start no-margin></ion-icon>
+                  <span class="eventPostedByHeader" item-start no-margin>Posted By :</span>
+                  <span class="eventPostedByName" item-start no-margin>{{event.postedBy}}</span>
+       </ion-item>
+       
+       <ion-row>
+          <ion-col>
+            <button ion-button clear class="inputBtnUser" icon-only>
+              <ion-icon item-start name="share" class="bottomBtnPost"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col align-self-center text-center>
+              <button  class="viewEventBtn" padding ion-button justify-content-center (click)="viewCompleteEvent(event.id)" clear>
+                  VIEW EVENT
+                </button>
+          </ion-col>
+          <ion-col>
+                <button *ngIf="event.bookmark" ion-button clear float-right class="inputBtnUser" icon-only (click)="removeBookmarkEvent(event.id)">
+                  <ion-icon class="redBookmark" name="bookmark" isActive="true"></ion-icon>
+                </button>
+                <button *ngIf="!event.bookmark" ion-button clear float-right class="inputBtnUser" icon-only (click)="bookmarkEvent(event.id)">
+                  <ion-icon class="grayBookmark" name="bookmark" isActive="true"></ion-icon>
+                </button>
+          </ion-col>
+        </ion-row>
+    
+
+  </ion-card>
+
+      
+      
+</ion-content>
+  

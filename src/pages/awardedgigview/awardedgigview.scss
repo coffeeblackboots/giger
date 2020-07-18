@@ -1,0 +1,309 @@
+page-awardedgigview {
+    .item-input::after {
+        border-bottom-color: transparent !important;
+        }
+    
+    .locationBar{
+       background-color: #F2F2F2;
+       border-radius: 8px;
+       padding-left: 4px;
+    }
+
+    .locationCol{
+        padding-left: 16px;
+    }
+
+    .locationBarInput{
+        font-size: 12px;
+    }
+
+    .locationBarInput>input{
+        letter-spacing: 0.4px;
+    }
+
+    .item-md{
+        font-size: 1.3rem;
+    }
+
+    .filterBtn{
+        border-color: transparent;
+        background-color: transparent;
+        color: black;
+        box-shadow: none;
+    }
+
+    .item-md ion-icon[item-start] + .item-inner{
+        margin-left: unset!important;
+        margin-top: unset!important;
+        margin-bottom: unset!important;
+    }
+
+    
+    .label-md{
+        margin: unset;
+    }
+
+    .item-md [item-start]{
+        margin-top: 0px!important;
+        margin-bottom: 0px!important;
+    }
+
+    .redBookmark{
+        color: #e53935!important;
+    }
+
+    .viewGigCard{
+        box-shadow: unset!important;
+    }
+
+    .eventTitleViewGigPage{
+        color: #363640!important;
+        font-family: Rubik-Medium!important;
+        font-size: 32px!important;
+        letter-spacing: 0.25px;
+    }
+
+    .eventCategoryViewGigPage{
+        color: #00cdac!important;
+        font-family: Rubik-Regular!important;
+        font-size: 16px!important;
+        letter-spacing: 0.25px;
+    }
+
+    .eventTitleViewGigPageItem{
+        margin-top: 10px;
+    }
+
+    .eventCompanyProfilePicViewGigPage{
+        height: 54px!important;
+        width: 54px!important;
+    }
+
+    .eventCompanyItemViewGigPage{
+        padding-top: 8px!important;
+        padding-right: 8px!important;
+    }
+
+    .eventCompanyLabelViewGigPage,
+    .eventPostedByHeaderViewGigPage,
+    .eventInclusionHeaderViewGigPage{
+        font-family: Rubik-Regular!important;
+        color: #363640!important;
+        font-size: 16px!important;
+        letter-spacing: 0.15px;
+    }
+
+    .eventCompanyCityViewGigPage,
+    .eventPostedByNameViewGigPage{
+        font-family: Rubik-Light!important;
+        color: #363640!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;
+    }
+
+    .endOfEventCompanyDetailsViewGigPage{
+        border-bottom: 1px solid #d4d4d4 !important;
+        padding-bottom: 8px!important;
+    }
+
+    .eventPostedStatusLabelActiveViewGigPage{
+        color: rgb(117, 209, 59);
+        font-family: Rubik-Regular!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;
+    }
+    
+    .eventPostedStatusLabelInActiveViewGigPage{
+        color: #e53935;
+        font-family: Rubik-Regular!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;
+    }
+
+    .eventPostedTimeViewGigPage{
+        font-family: Rubik-Light!important;
+        color: #006deb!important;
+        font-size: 16px!important;
+    }
+
+    //Start of Event Details
+
+    .eventDetailsHeaderViewGigPage{
+        color: #363640!important;
+        font-family: Rubik-Medium!important;
+        font-size: 20px!important;
+        letter-spacing: 0.25px;
+    }
+
+    .eventVenueViewGigPage,
+    .eventStartDateViewGigPage,
+    .eventEndDateViewGigPage,
+    .eventStartTimeViewGigPage,
+    .eventEndTimeViewGigPage,
+    .eventRequiredManViewGigPage,
+    .eventRequiredWomanViewGigPage,
+    .eventDescriptionViewGigPage{
+        font-family: Rubik-Light!important;
+        color: #363640!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;
+    }
+
+    .iconEventCardViewGigPage{
+        font-size: 22px!important;
+    }
+
+    //Underline Below Event Description Header
+    .endOfEventDetailsViewGigPage,
+    .endOfEventInclusionViewGigPage,
+    .endOfEventGigStatusViewGigPage,
+    .endOfEventPaymentViewGigPage{
+        border-bottom: 1px solid #d4d4d4 !important;
+        padding-bottom: 16px!important;
+    }
+
+    //Start of Remuneration and Inclusion Details
+
+    .eventInclusionHeaderViewGigPage{
+        color: #363640!important;
+        font-family: Rubik-Medium!important;
+        font-size: 20px!important;
+        letter-spacing: 0.25px;
+    }
+
+    .inclusionBadgeViewGigPage{
+        color: black!important;
+        background: #d0fff8!important;
+        padding: 8px!important;
+        padding-left: 16px!important;
+        padding-right: 16px!important;
+        font-family: Rubik-Light!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;;
+        font-weight: unset!important;
+        border-radius: 64px!important;
+        margin-bottom: 8px!important;
+    }
+    
+
+
+    // Payment Info and Details
+
+    .eventPaymentHeaderViewGigPage{
+        color: #363640!important;
+        font-family: Rubik-Medium!important;
+        font-size: 20px!important;
+        letter-spacing: 0.25px;
+    }
+
+    .payPerDayBadgeViewGigPage{
+        color: black!important;
+        background: #d0fff8!important;
+        padding: 8px!important;
+        padding-left: 16px!important;
+        padding-right: 16px!important;
+        font-family: Rubik-Light!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;;
+        font-weight: unset!important;
+        border-radius: 64px!important;
+        margin-bottom: 8px!important;
+    }
+
+    .gigStatusBadgeViewGigPage{
+        color: black!important;
+        background: #dec1ff!important;
+        padding: 8px!important;
+        padding-left: 16px!important;
+        padding-right: 16px!important;
+        font-family: Rubik-Light!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;;
+        font-weight: unset!important;
+        border-radius: 64px!important;
+        margin-bottom: 8px!important;
+    }
+
+    .gigPaymentSpanViewGigPageActive{
+        color: #64DD17!important;
+        font-family: Rubik-Regular!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;;
+        font-weight: unset!important;
+        margin-bottom: 8px!important;
+    }
+
+    .gigPaymentSpanViewGigPageInActive{
+        color: blue!important;
+        font-family: Rubik-Regular!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;;
+        font-weight: unset!important;
+        margin-bottom: 8px!important;
+    }
+
+    .gigStatusSpanViewGigPageActive{
+        color: #64DD17!important;
+        font-family: Rubik-Regular!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;;
+        font-weight: unset!important;
+        margin-bottom: 8px!important;
+    }
+
+    .gigStatusSpanViewGigPageInActive{
+        color: blue!important;
+        font-family: Rubik-Regular!important;
+        font-size: 16px!important;
+        letter-spacing: 0.4px;
+        font-weight: unset!important;
+        margin-bottom: 8px!important;
+    }
+
+    .gigStatusItem,.gigPaymentItem{
+        padding-top: 0px!important;
+    }
+
+    .eventToolbaarFooterViewGigPage{
+        -webkit-box-shadow: 1px 4px 12px 0px rgba(92,92,92,0.84);
+        -moz-box-shadow: 1px 4px 12px 0px rgba(92,92,92,0.84);
+        box-shadow: 1px 4px 12px 0px rgba(92,92,92,0.84);
+    }
+    
+    .interestedBtn{
+        font-family: Rubik-Regular!important;
+        font-size: 16px!important;
+        border-radius: 64px;
+        padding-left: 30px!important;
+        padding-right: 30px!important;
+        letter-spacing: 0.4px;
+        color: white;
+        border: 2px solid #00cdac;
+        background: #00cdac;
+    }
+
+    .awardedGigViewIcon{
+        color: gold;
+    }
+
+    // Icon Group Below Main Header.
+    .awardedGigDetailsIconGroup{
+        color: #00cdac;
+        padding-right:8px!important;
+    }
+
+    // Button Set Below Main Header
+    .awardedGigDetailsBtnGroup{
+        font-size: 14px!important;
+    }
+
+    .awardedGigViewNoteContainer{
+        background: #ececec;
+        border-radius: 8px;
+    }
+
+    .awardedGigViewNote{
+        font-family: Rubik-Regular!important;
+        font-size: 14px!important;
+    }
+}

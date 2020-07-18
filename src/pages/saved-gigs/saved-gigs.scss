@@ -1,0 +1,33 @@
+page-saved-gigs {
+    .redBookmark{
+        color: #e53935!important;
+    }
+
+    .viewEventBtn{
+        font-family: Rubik-Regular!important;
+        font-size: 16px!important;
+        border-radius: 64px;
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+        color: #363640;
+        border: 2px solid #00cdac;
+    }
+    
+    .item-md{
+        color: #363640!important;
+    }
+    
+    .payPerDayBadge{
+        background: #00cdac;
+        color: white!important;
+        padding: 10px!important;
+        padding-left: 16px!important;
+        padding-right: 16px!important;
+        font-family: Rubik-Medium!important;
+        font-size: 14px!important;
+        letter-spacing: 0.4px;;
+        font-weight: unset!important;
+        border-radius: 64px!important;
+        margin-bottom: 4px!important;
+    }
+}

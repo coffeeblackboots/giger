@@ -1,0 +1,60 @@
+<ion-menu side="right" [content]="content">
+  <ion-header no-border>
+    <ion-toolbar transparent class="homeNavBar" padding-top>
+      <ion-title>Directory</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+      <ion-card-header class="menuListHeader">
+          Your Profile
+        </ion-card-header>
+        <ion-list no-margin margin-left>
+            <button class="menuListItem" menuClose ion-item (click)="personalDetails()">
+              <ion-icon class="menuListIcon" name="person" margin-right></ion-icon>
+              Personal Details
+            </button>
+            <button class="menuListItem" menuClose ion-item (click)="skillsDetails()">
+                <ion-icon class="menuListIcon" name="color-palette" margin-right></ion-icon>
+                Skills & Education
+            </button>
+            <button class="menuListItem" menuClose ion-item (click)="passbookDetails()">
+                <ion-icon class="menuListIcon" name="card" margin-right></ion-icon>
+                Passbook
+            </button>
+            <button class="menuListItem" menuClose ion-item (click)="portfolioDetails()">
+                <ion-icon class="menuListIcon" name="images" margin-right></ion-icon>
+                Portfolio
+            </button>
+          </ion-list>
+          <ion-card-header class="menuListHeader">
+              Your Presence
+          </ion-card-header>
+    <ion-list no-margin margin-left>
+        <button class="menuListItem" menuClose ion-item (click)="home()">
+            <ion-icon class="menuListIcon" name="home" margin-right></ion-icon>
+            Home
+          </button>
+        <button class="menuListItem" menuClose ion-item (click)="awardedGigs()">
+            <ion-icon class="menuListIcon" name="trophy" margin-right></ion-icon>
+            Awarded GIGs
+          </button>
+          <button class="menuListItem" menuClose ion-item (click)="appliedGigs()">
+              <ion-icon class="menuListIcon" name="heart" margin-right></ion-icon>
+              Applied GIGs
+          </button>
+          <button class="menuListItem" menuClose ion-item (click)="savedGigs(p)">
+              <ion-icon class="menuListIcon" name="bookmark" margin-right></ion-icon>
+              Saved GIGs
+          </button>
+          <button class="menuListItem" menuClose ion-item (click)="logOutUser()">
+              <ion-icon class="menuListIcon" name="power" margin-right></ion-icon>
+              Logout
+          </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,50 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+  <ion-navbar transparent>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding fullscreen>
+    <ion-item>
+        <ion-label class="loginPageLabel">LOGIN</ion-label>
+    </ion-item>
+
+    <form [formGroup]="loginForm"  novalidate>
+        <ion-item>
+          <ion-label class="loginFormLabel" floating >Email ID</ion-label>
+          <ion-input
+          formControlName="email" type="email"
+          [class.invalid]="!loginForm.controls.email.valid && blur"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid &&
+        loginForm.controls.email.touched">
+         <p>Please enter a valid email address.</p>
+       </ion-item>
+
+
+        <ion-item>
+          <ion-label class="loginFormLabel" floating>Password</ion-label>
+          <ion-input type="password"
+          formControlName="password"
+          [class.invalid]="!loginForm.controls.password.valid && blur"></ion-input>
+        </ion-item>
+        <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid
+        && loginForm.controls.password.touched">
+        <p>Your password needs more than 6 characters.</p>
+        </ion-item>
+
+
+            <button  class="loginBtn" padding full ion-button justify-content-center (click)="loginUser()" [disabled]="!loginForm.valid">
+                <span class="loginBtnSpan">LOGIN</span>
+              </button>
+    </form>
+</ion-content>
